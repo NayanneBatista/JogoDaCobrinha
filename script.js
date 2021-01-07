@@ -14,19 +14,19 @@ let food = {
 }
 
 function criarBG() {
-    context.fillStyle = "lightblue"
+    context.fillStyle = "purple"
     context.fillRect(0, 0, 16 * box, 16 * box)
 }
 
 function criarCobrinha(){
     for(let i = 0; i < snake.length; i++){
-        context.fillStyle = "purple"
+        context.fillStyle = "lightpink"
         context.fillRect(snake[i].x, snake[i].y, box, box)
     }
 }
 
 function drawFood() {
-    context.fillStyle = "blue"
+    context.fillStyle = "lightgreen"
     context.fillRect(food.x, food.y, box, box)
 }
 
@@ -49,7 +49,7 @@ function iniciarJogo(){
     for(let i = 1; i < snake.length; i++){
         if(snake[0].x == snake[i].x && snake[0].y == snake[i].y){
             clearInterval(jogo)
-            alert("meu deus tu e tao noob pra morrer ;d")
+            alert("Game Over ;d")
         }
     }
 
